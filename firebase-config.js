@@ -1,4 +1,5 @@
 require('dotenv').config();
+const admin = require('firebase-admin');
 
 const firebaseConfig = {
     credential: admin.credential.applicationDefault(),
@@ -11,4 +12,6 @@ const firebaseConfig = {
     measurementId: process.env.FIREBASE_MEASUREMENT_ID
 };
 
-module.exports = firebaseConfig;
+admin.initializeApp(firebaseConfig);
+
+module.exports = admin;
