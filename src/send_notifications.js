@@ -36,10 +36,10 @@ const notifyNewOrder = async (sellerId, orderData) => {
                 title: "Nuevo Pedido",
                 body: `Tienes un nuevo pedido: ${orderData.productName}`,
             },
+            token: sellerToken
         };
-
         // Enviar la notificación
-        await messaging.send(sellerToken, payload);
+        await messaging.send(payload);
         console.log(`Notificación enviada al vendedor con ID ${sellerId}`);
     } catch (error) {
         console.error("Error al procesar la notificación:", error);
