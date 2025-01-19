@@ -15,7 +15,7 @@ const listenForNewOrders = async () => {
 
                     // Llama a la función para enviar la notificación
                     await notifyNewOrder(sellerId, orderData);
-                    console.log(`Notificación enviada para el vendedor: ${sellerId}`);
+                    
                 }
             });
         });
