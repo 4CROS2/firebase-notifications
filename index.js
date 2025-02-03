@@ -1,9 +1,13 @@
 const http = require('http');
 const { notifyNewOrder } = require('./src/send_notifications');
-const admin = require('./firebase-config'); // Asegúrate de usar tu archivo de configuración
+//const admin = require('firebase-admin');
+const ordernotification = require('./src/features/orders/application/orders_service');
+const { log } = require('console');
 
+ordernotification.listenNewOrdersUseCase.execute();
+
+/*
 const firestore = admin.firestore();
-
 const listenForNewOrders = async () => {
     try {
         // Escucha cambios en la colección de órdenes de los vendedores
@@ -12,7 +16,6 @@ const listenForNewOrders = async () => {
                 if (change.type === 'added') {
                     const orderData = change.doc.data();
                     const sellerId = change.doc.ref.parent.parent.id; // Obtén el ID del vendedor desde la referencia
-
                     // Llama a la función para enviar la notificación
                     await notifyNewOrder(sellerId, orderData);
                     
@@ -26,6 +29,7 @@ const listenForNewOrders = async () => {
 
 // Inicializa la escucha de nuevos pedidos
 listenForNewOrders();
+*/
 
 // Crear un servidor HTTP para mantener el proceso activo
 const server = http.createServer((req, res) => {
