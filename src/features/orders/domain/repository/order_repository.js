@@ -1,6 +1,6 @@
-class NotificationRepository {
+class OrderRepository {
     constructor() {
-        if (new.target === NotificationRepository) {
+        if (new.target === OrderRepository) {
             throw new TypeError("No se puede instanciar una clase abstracta.");
         }
     }
@@ -15,4 +15,4 @@ class NotificationRepository {
     }
 }
 
-module.exports = NotificationRepository;
+module.exports = OrderRepository;

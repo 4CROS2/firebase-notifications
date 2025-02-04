@@ -1,4 +1,4 @@
-class NotificationEntity {
+class OrderEntity {
     constructor({
         quantity,
         total_paid,
@@ -30,4 +30,4 @@ class NotificationEntity {
     
 }
 
-module.exports = NotificationEntity;
+module.exports = OrderEntity;

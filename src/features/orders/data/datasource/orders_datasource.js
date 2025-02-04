@@ -1,4 +1,4 @@
-const admin = require('../../../../core/configs/firebase-config');
+const admin = require('../../../../core/configs/firebase/firebase-config');
 const firestore = admin.firestore();
 
 const listenForNewOrders = (callback) => {
