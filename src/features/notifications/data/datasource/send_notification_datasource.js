@@ -22,7 +22,7 @@ const sendNotification = async (NotificationModel) => {
 
         // Enviar la notificación
         await messaging.send(payload);
-        console.log(`Notificación enviada al usuario con ID ${NotificationModel.seller_id}`);
+        console.log(`Notificación enviada al usuario con ID ${NotificationModel.id}`);
     }
     catch (error) {
         console.error("Error al procesar la notificación:", error);
