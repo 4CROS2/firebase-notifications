@@ -17,5 +17,3 @@ if (!admin.apps.length) {
 }
 
 module.exports = admin;
-
-asd
